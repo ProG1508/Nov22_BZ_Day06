@@ -1,0 +1,22 @@
+#!/bin/bash -x
+#This program is for Harmonic Number
+
+read -p "Please enter number to get harmonic number: " x
+
+num=$x
+for((n=1;n<=$num;n++))
+do
+	
+	if [ $n -eq 1 ]	
+	then 
+		echo "1"
+	elif [ $n -lt $num ]
+	then 
+		H=1/$n
+		echo "$H"
+	else
+		H=1/$n
+		echo "$H"
+	fi
+
+done

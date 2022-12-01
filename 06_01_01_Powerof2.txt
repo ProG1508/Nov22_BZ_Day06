@@ -1,0 +1,17 @@
+#!/bin/bash -x
+#This program is of power of 2
+
+
+
+read -p "Please Enter number N as Power of 2 upto 100: " x
+
+
+for((n=0;n<=$x;n++))		
+do
+	y=$((2**$n))		#Power of 2 
+	echo $y
+	if [ $n -eq $x ]
+	then
+		echo "So $x th power of 2 is $y"
+	fi
+done
