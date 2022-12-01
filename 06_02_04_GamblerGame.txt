@@ -1,0 +1,34 @@
+#!/bin/bash
+#This program is for Gambler's Game
+
+
+cash=100
+loss=0
+win=1
+
+
+while [ $cash -ne 0 -a $cash -ne 201 ]
+do
+
+	z=$((RANDOM%2))
+
+      	if [ $z -eq $loss ]
+      	then
+      		echo "Loss 1.00 Re"
+      		((cash--))
+		echo "Cash Remained now $cash "
+      	else
+      		echo "Win 1.00 Re"
+      		((cash++))
+		echo "Cash Remained now $cash "
+	fi
+
+done
+
+if [ $cash -eq 0 ]
+then
+            echo "Gambler Loss the Game"
+				
+else [ $cash -eq 200 ]
+            echo "Gambler Wins the Game"
+fi

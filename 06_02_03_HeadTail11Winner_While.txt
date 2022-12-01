@@ -1,0 +1,34 @@
+#!/bin/bash
+#This program is for 11 head or 11 Tail Counts
+
+
+
+Head_Counter=1
+Tail_Counter=1
+Head=0
+Tail=1
+
+
+while [ $Head_Counter -ne 12 -a $Tail_Counter -ne 12 ]
+do
+
+	z=$((RANDOM%2))
+
+	if [ $z -eq $Head ]
+	then
+      		echo "Head"
+		((Head_Counter++))
+	else
+      		echo "Tail"
+		((Tail_Counter++))
+	fi
+
+done
+
+if [ $Head_Counter -eq 12 ]
+then
+            echo "Head Wins"
+elif [ $Tail_Counter -eq 12 ]
+then 
+           echo "Tail Wins"
+fi
